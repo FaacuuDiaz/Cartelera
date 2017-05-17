@@ -4,6 +4,8 @@ import java.util.Collection;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 @Table(name="cartelera")
@@ -16,18 +18,22 @@ public class Cartelera {
 	private String tipo;
 	
 	@ManyToMany
+	@JsonIgnore
 	 private Collection<Template> templates;
 
 	@OneToMany( mappedBy = "cartelera", cascade={CascadeType.REMOVE,CascadeType.REFRESH,CascadeType.MERGE})
+	@JsonIgnore
 	private Collection<Publicacion> publicaciones;
 	
 	
 	@OneToMany(mappedBy="cartelera")
+	@JsonIgnore
 	private Collection<NotificacionCartelera> notificacion;
 	
 	private String descripcion;
 	
 	@ManyToMany(mappedBy = "carteleras")
+	@JsonIgnore
 	private Collection<Usuario> usuarios;
 
 	public Cartelera(String tipo, String descripcion) {

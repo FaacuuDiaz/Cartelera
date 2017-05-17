@@ -4,6 +4,8 @@ import java.util.Collection;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="publicacion")
 public class Publicacion {
@@ -18,9 +20,11 @@ public class Publicacion {
 	 private Cartelera cartelera;
 
 	@OneToMany(mappedBy = "publicacion")
+	@JsonIgnore
 	private Collection<Media> medias;
 
 	@OneToMany(mappedBy = "publicacion")
+	@JsonIgnore
 	private Collection<Comentario> comentarios;
 	
 	private Boolean comentariosHabilitados;

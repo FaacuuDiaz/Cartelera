@@ -4,6 +4,8 @@ import java.util.Collection;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="usuario")
 public class Usuario {
@@ -17,14 +19,17 @@ public class Usuario {
 	
 	
 	@OneToMany(mappedBy = "usuario")
+	@JsonIgnore
 	private Collection<Comentario> comentarios;
 	
 	@ManyToMany
 	@JoinTable(name="usuario_carteleras", joinColumns=@JoinColumn(name="usuario_id"), inverseJoinColumns=@JoinColumn(name="cartelera_id"))
+	@JsonIgnore
 	private Collection<Cartelera> carteleras;
 	
 	
 	@OneToMany(mappedBy = "usuario")
+	@JsonIgnore
 	private Collection<NotificacionCartelera> notificaciones;
 
 	public Usuario(String usuario, String clave) {

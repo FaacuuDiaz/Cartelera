@@ -5,6 +5,8 @@ import java.util.Collection;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="template")
 public class Template {
@@ -15,6 +17,7 @@ public class Template {
 	private String nombre;
 
 	@ManyToMany(mappedBy = "templates")
+	@JsonIgnore
 	private Collection<Cartelera> carteleras;
 
 	public Template(String nombre) {

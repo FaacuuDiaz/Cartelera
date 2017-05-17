@@ -3,11 +3,14 @@ package implementacionesDAO;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.*;
+
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import interfacesDAO.GenericDAO;
 import model.Media;
 
 @Transactional
+@Repository
 public class GenericDAOHibernateJPA<T> implements GenericDAO<T> {
 	protected Class<T> persistentClass;
 
@@ -17,7 +20,7 @@ public class GenericDAOHibernateJPA<T> implements GenericDAO<T> {
 	public GenericDAOHibernateJPA(Class<T> class1) {
 		persistentClass = class1;
 	}
-
+	@PersistenceContext
 	public void setEntityManager(EntityManager em) {
 		this.entityManager = em;
 	}
@@ -27,7 +30,7 @@ public class GenericDAOHibernateJPA<T> implements GenericDAO<T> {
 	}
 
 	public T persistir(T entity) {
-		entityManager.persist(entity);
+		this.entityManager.persist(entity);
 		return entity;
 	}
 
@@ -54,7 +57,7 @@ public class GenericDAOHibernateJPA<T> implements GenericDAO<T> {
 	}
 
 	public List<T> recuperarTodos() {
-		Query consulta = this.getEntityManager().createQuery("select e from " + getPersistentClass().getSimpleName());
+		Query consulta = this.entityManager.createQuery("select e from " + getPersistentClass().getSimpleName());
 		List<T> resultado = (List<T>) consulta.getResultList();
 		if (resultado.size() != 0) {
 			return resultado;
