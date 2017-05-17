@@ -14,134 +14,143 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/junit/junit -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>5.2.4.Final</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>5.2.4.Final</version>
-		</dependency>
-				<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-c3p0</artifactId>
-			<version>5.0.3.Final</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 <dependency> 
-			<groupId>org.hibernate</groupId> <artifactId>hibernate-c3p0</artifactId> 
-			<version>5.2.4.Final</version> </dependency> -->
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<version>4.2.1.RELEASE</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>4.2.1.RELEASE</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>4.2.1.RELEASE</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>4.2.1.RELEASE</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-webmvc</artifactId>
-			<version>4.2.1.RELEASE</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>4.2.1.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>c3p0</groupId>
-			<artifactId>c3p0</artifactId>
-			<version>0.9.1.2</version>
-		</dependency>
+		   <!--  inicio dependencias tipo rest -->
+     <dependency>
+<groupId>javax.servlet</groupId>
+<artifactId>javax.servlet-api</artifactId>
+<version>3.1.0</version>
+</dependency>
 
-		<dependency>
+<dependency>
+<groupId>org.springframework</groupId>
+<artifactId>spring-core</artifactId>
+<!--  <version>4.3.4.RELEASE</version>-->
+ <version>4.2.1.RELEASE</version>
+</dependency>
+<dependency>
+<groupId>org.springframework</groupId>
+<artifactId>spring-webmvc</artifactId>
+ <version>4.2.1.RELEASE</version>
+</dependency>
+ <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId> 
+            <artifactId>jackson-databind</artifactId> 
+            <version>2.8.6</version> 
+       </dependency> 
+       
+<!--        <dependency> -->
+<!--     <groupId>com.fasterxml.jackson.dataformat</groupId> -->
+<!--     <artifactId>jackson-dataformat-xml</artifactId> -->
+<!--     <version>2.4.1</version> -->
+<!-- </dependency> -->
+<!--         <dependency> -->
+<!--             <groupId>com.fasterxml.jackson.core</groupId>  -->
+<!--             <artifactId>jackson-core</artifactId>  -->
+<!--             <version>2.4.1</version>  -->
+<!--        </dependency>  -->
+<!--     <dependency> -->
+<!--         <groupId>com.fasterxml.jackson.core</groupId> -->
+<!--         <artifactId>jackson-annotations</artifactId> -->
+<!--         <version>2.4.1</version> -->
+<!--     </dependency> -->
+    <!--  fin dependencias tipo rest -->
+    
+    
+    <!--  dependencias mias, obviando las del flaco (cambiando version spring -->
+       <!--  hibernate -->
+     <dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-entitymanager</artifactId>
+    <version>5.0.3.Final</version>
+</dependency>
+
+<dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>5.0.3.Final</version>
+    </dependency>
+    
+    
+    
+    <!-- Hibernate c3p0 connection pool -->
+<dependency>
+<groupId>org.hibernate</groupId>
+<artifactId>hibernate-c3p0</artifactId>
+<version>5.0.3.Final</version>
+</dependency>
+<!--  spring -->
+    <dependency>
+<groupId>org.springframework</groupId>
+<artifactId>spring-context</artifactId>
+ <version>4.2.1.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-tx</artifactId>
+       <version>4.2.1.RELEASE</version>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-orm</artifactId>
+       <version>4.2.1.RELEASE</version>
+</dependency>
+<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.37</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/mysql-connector-java-5.1.37.jar</systemPath>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>5.0.3.Final</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.37</version>
-		</dependency>
-		
-		<dependency>
-		<groupId>com.google.code.gson</groupId>
-		<artifactId>gson</artifactId>
-		<version>2.7</version>
-		</dependency>
-
-		<!-- Dependencia para el uso de JSON Web Token -->
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt</artifactId>
-			<version>0.6.0</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.inject</groupId>
-			<artifactId>javax.inject</artifactId>
-			<version>1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.6.4</version>
-		</dependency>
-	</dependencies>
-
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>2.1</version>
-					<configuration>
-						<source>1.8</source>
-						<target>1.8</target>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-
-		<finalName>CarteleraVirtual</finalName>
-	</build>
+<dependency>
+    <groupId>mysql</groupId>
+	<artifactId>mysql-connector-java</artifactId>
+	<version>5.1.37</version>
+</dependency>  
+<dependency>
+<groupId>org.springframework</groupId>
+<artifactId>spring-web</artifactId>
+ <version>4.2.1.RELEASE</version>
+</dependency>
+    <dependency>
+<groupId>com.google.code.gson</groupId>
+<artifactId>gson</artifactId>
+<version>2.7</version>
+</dependency>
+    
+    <!-- Dependencia para el uso de JSON Web Token -->
+<dependency>
+<groupId>io.jsonwebtoken</groupId>
+<artifactId>jjwt</artifactId>
+<version>0.6.0</version>
+</dependency>
+<dependency>
+<groupId>javax.inject</groupId>
+<artifactId>javax.inject</artifactId>
+<version>1</version>
+</dependency>
+ 
+<!--  <dependency> -->
+<!-- <groupId>com.fasterxml.jackson.core</groupId> -->
+<!-- <artifactId>jackson-databind</artifactId> -->
+<!-- <version>2.6.4</version> -->
+<!-- </dependency>    -->
+  </dependencies>
+  <build>
+  <pluginManagement>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>2.1</version>
+<configuration>
+<source>1.8</source>
+<target>1.8</target>
+</configuration>
+</plugin>
+</plugins>
+</pluginManagement>
+  
+    <finalName>EntregaVeron</finalName>
+  </build>
 </project>
