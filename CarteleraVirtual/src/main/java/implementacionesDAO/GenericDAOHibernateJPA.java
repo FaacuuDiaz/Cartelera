@@ -7,15 +7,17 @@ import javax.persistence.*;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import interfacesDAO.GenericDAO;
-import model.Media;
+
 
 @Transactional
 @Repository
 public class GenericDAOHibernateJPA<T> implements GenericDAO<T> {
 	protected Class<T> persistentClass;
+	private EntityManagerFactory em = Persistence.createEntityManagerFactory("unidad");
+	
 
 	@PersistenceContext
-	private EntityManager entityManager = null;
+	private EntityManager entityManager = this.em.createEntityManager();
 
 	public GenericDAOHibernateJPA(Class<T> class1) {
 		persistentClass = class1;

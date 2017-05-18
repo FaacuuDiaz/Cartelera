@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
- http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
-	version="2.1">-->
 	<persistence version="2.0"
     xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
@@ -18,7 +13,7 @@
 		<class>model.Cartelera</class> 
 		<properties>
 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
-			<property name="hibernate.connection.password" value="root"/>
+			<property name="hibernate.connection.password" value=""/>
 			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/grupo18"/>
 			<property name="hibernate.connection.username" value="root"/>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
